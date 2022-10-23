@@ -1,0 +1,16 @@
+{
+  "register": {
+    "intro": "Welcome to Chest Tracker For Clash Royale",
+    "info": "Please enter your tag id so we can search for your upcoming chests!",
+    "help": "Need help finding your player tag?",
+    "submit": "Submit",
+    "toast": {}
+  },
+  "chests": {
+    "title": "Upcoming Chests",
+    "greet": "Greetings,",
+    "updated": "Updated at: ",
+    "change": "Not you? Click here to change.",
+    "info": "Outdated? You can pull down to refresh data!"
+  }
+}
