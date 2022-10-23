@@ -1,14 +1,19 @@
+import { NavigationContainer } from '@react-navigation/native'
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { useFonts } from 'expo-font'
 import { locale } from 'expo-localization'
 import { StatusBar } from 'expo-status-bar'
 import { I18n } from 'i18n-js'
-import { StyleSheet, Text, View } from 'react-native'
 
 import en from './i18n/en.json'
 import pt from './i18n/pt.json'
+import ChestsScreen from './screens/ChestsScreen'
+import HomeScreen from './screens/HomeScreen'
 
 const translations = { en, pt }
 const i18n = new I18n(translations, { locale, enableFallback: true })
+
+const Stack = createNativeStackNavigator()
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -17,18 +22,12 @@ export default function App() {
   })
 
   return (
-    <View style={styles.container}>
-      <Text>{i18n.t('register.intro')}</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Register" component={HomeScreen} />
+        <Stack.Screen name="Chests" component={ChestsScreen} />
+        <StatusBar style="auto" />
+      </Stack.Navigator>
+    </NavigationContainer>
   )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-})
