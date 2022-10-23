@@ -1,3 +1,4 @@
+import { useFonts } from 'expo-font'
 import { locale } from 'expo-localization'
 import { StatusBar } from 'expo-status-bar'
 import { I18n } from 'i18n-js'
@@ -10,6 +11,11 @@ const translations = { en, pt }
 const i18n = new I18n(translations, { locale, enableFallback: true })
 
 export default function App() {
+  const [fontsLoaded] = useFonts({
+    'Nunito-Regular': require('./assets/fonts/Nunito-Regular.ttf'),
+    'supercell-magic': require('./assets/fonts/supercell-magic.ttf'),
+  })
+
   return (
     <View style={styles.container}>
       <Text>{i18n.t('register.intro')}</Text>
