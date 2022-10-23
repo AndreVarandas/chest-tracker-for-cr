@@ -1,0 +1,16 @@
+{
+  "register": {
+    "intro": "Bem-vindo ao Chest Tracker para o Clash Royale",
+    "info": "Por favor, insere a tua tag id para podermos procurar os teus próximos baús.",
+    "help": "Clica aqui apra saberes como encontar a tua tag id.",
+    "submit": "Procurar",
+    "toast": {}
+  },
+  "chests": {
+    "title": "Próximos Baús",
+    "greet": "Olá,",
+    "updated": "Atualizado a: ",
+    "change": "Não és tu? Clica aqui para mudares.",
+    "info": "Desatualizado? Puxa para baixo para actualizares os dados."
+  }
+}
